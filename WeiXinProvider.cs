@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using TT.WeiXinMiddleware;
 
-namespace TT.SoMall.WeiXinHandler
+namespace TTWork.WeiXinMiddleware
 {
     public class WeiXinProvide : IWeiXinProvider
     {
@@ -38,7 +37,7 @@ namespace TT.SoMall.WeiXinHandler
                     context.Response.StatusCode = 200;
 
                     //1、验证签名
-                    if (Utils.CheckSignature(context.Request.Query["nonce"],
+                    if (TT.WeiXinMiddleware.Utils.CheckSignature(context.Request.Query["nonce"],
                                                               context.Request.Query["timestamp"],
                                                               context.Request.Query["signature"],
                                                               configuration.GetSection("WeiXinOAuth")["Token"]))
@@ -83,7 +82,7 @@ namespace TT.SoMall.WeiXinHandler
             {
                 strRecieveBody = streamReader.ReadToEndAsync().GetAwaiter().GetResult();
                 logger.Info($"接收内容：{strRecieveBody}");
-                strRecieveBody = Utils.ClearXmlHeader(strRecieveBody);
+                strRecieveBody = TT.WeiXinMiddleware.Utils.ClearXmlHeader(strRecieveBody);
             }
 
             //反序列化

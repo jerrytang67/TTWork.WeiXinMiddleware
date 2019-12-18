@@ -12962,11 +12962,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Code\\Abp\\SoMall\\wx\\TTWork.WeiXinMiddleware\\TTWork.WeiXinMiddleware.csproj",
+      "projectUniqueName": "E:\\Code\\Abp\\TTWork.WeiXinMiddleware\\TTWork.WeiXinMiddleware.csproj",
       "projectName": "TTWork.WeiXinMiddleware",
-      "projectPath": "E:\\Code\\Abp\\SoMall\\wx\\TTWork.WeiXinMiddleware\\TTWork.WeiXinMiddleware.csproj",
+      "projectPath": "E:\\Code\\Abp\\TTWork.WeiXinMiddleware\\TTWork.WeiXinMiddleware.csproj",
       "packagesPath": "C:\\Users\\tt-tj\\.nuget\\packages\\",
-      "outputPath": "E:\\Code\\Abp\\SoMall\\wx\\TTWork.WeiXinMiddleware\\obj\\",
+      "outputPath": "E:\\Code\\Abp\\TTWork.WeiXinMiddleware\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

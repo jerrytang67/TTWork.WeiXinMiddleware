@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace TT.WeiXinMiddleware.Extensions
+namespace TTWork.WeiXinMiddleware.Extensions
 {
     public static class WeiXinMiddlewareExtensions
     {
         public static void UseWeiXin(this IApplicationBuilder app, WeiXinOptions options)
         {
-            app.UseMiddleware<WeiXinMiddleware>(options);
+            app.UseMiddleware<TTWork.WeiXinMiddleware.WeiXinMiddleware>(options);
         }
     }
 }

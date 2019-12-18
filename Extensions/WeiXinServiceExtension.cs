@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using TT.SoMall.WeiXinHandler;
 
-namespace TT.WeiXinMiddleware.Extensions
+namespace TTWork.WeiXinMiddleware.Extensions
 {
     public static class WeiXinServiceCollectionExtension
     {

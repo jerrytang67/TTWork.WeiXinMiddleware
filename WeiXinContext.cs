@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 
-namespace TT.WeiXinMiddleware
+namespace TTWork.WeiXinMiddleware
 {
     public class WeiXinContextBase
     {

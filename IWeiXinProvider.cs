@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 
-namespace TT.WeiXinMiddleware
+namespace TTWork.WeiXinMiddleware
 {
     public interface IWeiXinProvider
     {

@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using TT.WeiXinMiddleware;
 using static System.Int32;
 
-namespace TT.WeiXinMiddleware
+namespace TTWork.WeiXinMiddleware
 {
     public class WeiXinMiddleware
     {

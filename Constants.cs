@@ -1,4 +1,4 @@
-﻿namespace TT.WeiXinMiddleware
+﻿namespace TTWork.WeiXinMiddleware
 {
     public class Constants
     {

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using TT.WeiXinMiddleware;
 
-namespace TT.WeiXinMiddleware
+namespace TTWork.WeiXinMiddleware
 {
     public class WeiXinOptions
     {

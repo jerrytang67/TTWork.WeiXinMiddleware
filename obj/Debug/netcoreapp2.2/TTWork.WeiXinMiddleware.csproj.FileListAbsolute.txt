@@ -1,0 +1,10 @@
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.deps.json
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.runtimeconfig.json
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.runtimeconfig.dev.json
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.dll
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.pdb
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.AssemblyInfoInputs.cache
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.AssemblyInfo.cs
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.dll
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.pdb
+E:\Code\Abp\SoMall\wx\TT.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.csprojAssemblyReference.cache

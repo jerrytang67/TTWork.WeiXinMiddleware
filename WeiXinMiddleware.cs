@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using TT.WeiXinMiddleware;
+using TTWork.WeiXinMiddleware;
 using static System.Int32;
 
 namespace TTWork.WeiXinMiddleware

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using TT.WeiXinMiddleware;
+using TTWork.WeiXinMiddleware;
 
 namespace TTWork.WeiXinMiddleware
 {

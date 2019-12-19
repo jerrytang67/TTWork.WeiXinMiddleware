@@ -1,0 +1,13 @@
+obj/
+bin/
+bin/Debug/netcoreapp2.2/TTWork.WeiXinMiddleware.dll
+obj/TTWork.WeiXinMiddleware.csproj.nuget.dgspec.json
+obj/TTWork.WeiXinMiddleware.csproj.nuget.cache
+obj/project.assets.json
+obj/Debug/netcoreapp2.2/TTWork.WeiXinMiddleware.pdb
+obj/Debug/netcoreapp2.2/TTWork.WeiXinMiddleware.dll
+obj/Debug/netcoreapp2.2/TTWork.WeiXinMiddleware.csproj.FileListAbsolute.txt
+obj/Debug/netcoreapp2.2/TTWork.WeiXinMiddleware.assets.cache
+Entity/WeixinUserInfoResult.cs
+bin/Debug/netcoreapp2.2/TTWork.WeiXinMiddleware.pdb
+bin/Debug/netcoreapp2.2/TTWork.WeiXinMiddleware.dll

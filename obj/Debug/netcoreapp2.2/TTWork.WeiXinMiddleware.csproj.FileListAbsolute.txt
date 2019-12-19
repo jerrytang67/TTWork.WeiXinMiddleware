@@ -17,3 +17,14 @@ E:\Code\Abp\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddlew
 E:\Code\Abp\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.AssemblyInfo.cs
 E:\Code\Abp\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.dll
 E:\Code\Abp\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.pdb
+E:\Code\Abp\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.csprojAssemblyReference.cache
+E:\Code\Github\TTWork.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.deps.json
+E:\Code\Github\TTWork.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.runtimeconfig.json
+E:\Code\Github\TTWork.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.runtimeconfig.dev.json
+E:\Code\Github\TTWork.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.dll
+E:\Code\Github\TTWork.WeiXinMiddleware\bin\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.pdb
+E:\Code\Github\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.csprojAssemblyReference.cache
+E:\Code\Github\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.AssemblyInfoInputs.cache
+E:\Code\Github\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.AssemblyInfo.cs
+E:\Code\Github\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.dll
+E:\Code\Github\TTWork.WeiXinMiddleware\obj\Debug\netcoreapp2.2\TTWork.WeiXinMiddleware.pdb

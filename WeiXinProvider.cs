@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using TT.WeiXinMiddleware;
+using TTWork.WeiXinMiddleware;
 
 namespace TTWork.WeiXinMiddleware
 {
@@ -37,7 +37,7 @@ namespace TTWork.WeiXinMiddleware
                     context.Response.StatusCode = 200;
 
                     //1、验证签名
-                    if (TT.WeiXinMiddleware.Utils.CheckSignature(context.Request.Query["nonce"],
+                    if (TTWork.WeiXinMiddleware.Utils.CheckSignature(context.Request.Query["nonce"],
                                                               context.Request.Query["timestamp"],
                                                               context.Request.Query["signature"],
                                                               configuration.GetSection("WeiXinOAuth")["Token"]))
@@ -82,7 +82,7 @@ namespace TTWork.WeiXinMiddleware
             {
                 strRecieveBody = streamReader.ReadToEndAsync().GetAwaiter().GetResult();
                 logger.Info($"接收内容：{strRecieveBody}");
-                strRecieveBody = TT.WeiXinMiddleware.Utils.ClearXmlHeader(strRecieveBody);
+                strRecieveBody = TTWork.WeiXinMiddleware.Utils.ClearXmlHeader(strRecieveBody);
             }
 
             //反序列化

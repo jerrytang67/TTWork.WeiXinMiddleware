@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TTWork.WeiXinMiddleware.Utils
+namespace TTWork.WeiXinMiddleware
 {
     public class DateTimeHelper
     {

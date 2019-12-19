@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace TT.WeiXinMiddleware
+namespace TTWork.WeiXinMiddleware
 {
     public static class Utils
     {

@@ -1,5 +1,4 @@
 ﻿using System;
-using TTWork.WeiXinMiddleware.Utils;
 
 namespace TTWork.WeiXinMiddleware.Entity
 {

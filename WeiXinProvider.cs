@@ -4,21 +4,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using TTWork.WeiXinMiddleware;
+using Microsoft.Extensions.Logging;
 
 namespace TTWork.WeiXinMiddleware
 {
     public class WeiXinProvide : IWeiXinProvider
     {
-        public WeiXinProvide()
+        private readonly ILogger _logger;
+
+        public WeiXinProvide(ILogger logger)
         {
+            _logger = logger;
         }
 
         public WeiXinOptions Options { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        private readonly static log4net.ILog logger = log4net.LogManager.GetLogger(typeof(WeiXinProvide));
+
 
         /// <summary>
         /// <![CDATA[运行服务]]>
@@ -31,32 +31,37 @@ namespace TTWork.WeiXinMiddleware
             try
             {
                 #region 1、验证签名
+
                 if (context.Request.Method.ToUpper() == "GET")
                 {
                     context.Response.ContentType = "text/plain;charset=utf-8";
                     context.Response.StatusCode = 200;
 
                     //1、验证签名
-                    if (TTWork.WeiXinMiddleware.Utils.CheckSignature(context.Request.Query["nonce"],
-                                                              context.Request.Query["timestamp"],
-                                                              context.Request.Query["signature"],
-                                                              configuration.GetSection("WeiXinOAuth")["Token"]))
+                    if (Utils.Security.CheckSignature(context.Request.Query["nonce"],
+                            context.Request.Query["timestamp"],
+                            context.Request.Query["signature"],
+                            configuration.GetSection("WeiXinOAuth")["Token"]))
                     {
                         await context.Response.WriteAsync(context.Request.Query["echostr"]);
                         return;
                     }
+
                     await context.Response.WriteAsync("无效签名！");
                     return;
                 }
-                #endregion  1、验证签名
+
+                #endregion 1、验证签名
 
                 #region 2、接收微信消息
-                await OnRecieve(context, tenantIds);//接收消息
+
+                await OnRecieve(context, tenantIds); //接收消息
+
                 #endregion 2、接收微信消息
             }
             catch (Exception ex)
             {
-                logger.Error("运行服务", ex);
+                _logger.LogError("运行服务 {@WeiXinProvideError}", ex);
                 await context.Response.WriteAsync(ex.Message);
             }
         }
@@ -76,20 +81,19 @@ namespace TTWork.WeiXinMiddleware
         public virtual Task OnRecieve(HttpContext context, List<int> tenantIds)
         {
             if (Options.OnRecieveAsync != null) return Options.OnRecieveAsync(context);
-            string strRecieveBody = null;//接收消息
+            string recieveBody = null; //接收消息
 
             using (System.IO.StreamReader streamReader = new System.IO.StreamReader(context.Request.Body))
             {
-                strRecieveBody = streamReader.ReadToEndAsync().GetAwaiter().GetResult();
-                logger.Info($"接收内容：{strRecieveBody}");
-                strRecieveBody = TTWork.WeiXinMiddleware.Utils.ClearXmlHeader(strRecieveBody);
+                recieveBody = streamReader.ReadToEndAsync().GetAwaiter().GetResult();
+                _logger.LogInformation("接收内容：{@RecieveBody}", recieveBody);
+                recieveBody = Utils.Security.ClearXmlHeader(recieveBody);
             }
 
             //反序列化
-            var recieve = _XmlSerializer.Deserialize(strRecieveBody) as WeiXinMessage;
+            var recieve = _XmlSerializer.Deserialize(recieveBody) as WeiXinMessage;
 
-
-            LogTask(tenantIds, recieve, strRecieveBody);
+            LogTask(tenantIds, recieve, recieveBody);
 
             //事件消息
             if (recieve.MsgType == Constants.MSG_TYPE.EVENT)
@@ -193,6 +197,7 @@ namespace TTWork.WeiXinMiddleware
             if (Options.OnLocationAsync != null) return Options.OnLocationAsync(context);
             return Task.Delay(0);
         }
+
         #endregion
     }
 }
